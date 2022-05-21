@@ -8,14 +8,14 @@ function makeLine(width, i, frame) {
 
 function printDiamond(character) {
   var a = "A".charCodeAt(),
-    frame,
+    currentCharCode,
     width = character.toUpperCase().charCodeAt() - a,
     i = 0,
     lines = [];
 
   while (i++ < width) {
-    frame = String.fromCharCode(a + i);
-    lines.push(makeLine(width, i, frame));
+    currentCharCode = String.fromCharCode(a + i);
+    lines.push(makeLine(width, i, currentCharCode));
   }
   if (lines.length) {
     lines.unshift(blanks(width + 1) + "A");
